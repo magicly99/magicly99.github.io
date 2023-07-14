@@ -1,0 +1,742 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="数组总结一、快慢指针技巧原地删除相同的元素&#x2F;移除某元素&#x2F;移动0原地删除相同的元素 移除某元素 移动0 思路：fast一直遍历整个数组，slow遍历到不同元素的下一位 二、左右指针技巧1、二分寻找和为target的两数寻找和 思路：左右指针，相加得到sum，比较sum和target大小 2、寻找最长回文子串最长回文子串 思路：从i位置进行扩展寻找或从i，i+1进行拓展，最长的进行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数组总结">
+<meta property="og:url" content="http://example.com/2023/07/05/%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数组总结一、快慢指针技巧原地删除相同的元素&#x2F;移除某元素&#x2F;移动0原地删除相同的元素 移除某元素 移动0 思路：fast一直遍历整个数组，slow遍历到不同元素的下一位 二、左右指针技巧1、二分寻找和为target的两数寻找和 思路：左右指针，相加得到sum，比较sum和target大小 2、寻找最长回文子串最长回文子串 思路：从i位置进行扩展寻找或从i，i+1进行拓展，最长的进行">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-07-05T13:30:58.387Z">
+<meta property="article:modified_time" content="2023-07-07T07:15:05.914Z">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>数组总结 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数组总结"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-07-05 21:30" pubdate>
+          July 5, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.8k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          24 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">数组总结</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="数组总结"><a href="#数组总结" class="headerlink" title="数组总结"></a>数组总结</h1><h2 id="一、快慢指针技巧"><a href="#一、快慢指针技巧" class="headerlink" title="一、快慢指针技巧"></a>一、快慢指针技巧</h2><h4 id="原地删除相同的元素-x2F-移除某元素-x2F-移动0"><a href="#原地删除相同的元素-x2F-移除某元素-x2F-移动0" class="headerlink" title="原地删除相同的元素&#x2F;移除某元素&#x2F;移动0"></a>原地删除相同的元素&#x2F;移除某元素&#x2F;移动0</h4><p><a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">原地删除相同的元素</a></p>
+<p><a href="https://leetcode.cn/problems/remove-element/">移除某元素</a></p>
+<p><a href="https://leetcode.cn/problems/move-zeroes/">移动0</a></p>
+<p>思路：fast一直遍历整个数组，slow遍历到不同元素的下一位</p>
+<h2 id="二、左右指针技巧"><a href="#二、左右指针技巧" class="headerlink" title="二、左右指针技巧"></a>二、左右指针技巧</h2><h3 id="1、二分寻找和为target的两数"><a href="#1、二分寻找和为target的两数" class="headerlink" title="1、二分寻找和为target的两数"></a>1、二分寻找和为target的两数</h3><p><a href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/">寻找和</a></p>
+<p>思路：左右指针，相加得到sum，比较sum和target大小</p>
+<h3 id="2、寻找最长回文子串"><a href="#2、寻找最长回文子串" class="headerlink" title="2、寻找最长回文子串"></a>2、寻找最长回文子串</h3><p><a href="https://leetcode.cn/problems/longest-palindromic-substring/">最长回文子串</a></p>
+<p>思路：从i位置进行扩展寻找或从i，i+1进行拓展，最长的进行更新</p>
+<h2 id="三、前缀和数组：对某个区间进行统计"><a href="#三、前缀和数组：对某个区间进行统计" class="headerlink" title="三、前缀和数组：对某个区间进行统计"></a>三、前缀和数组：对某个区间进行统计</h2><h3 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h3><ol>
+<li>是什么？怎么定义的？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//num[0...i-1]之和</span><br>preSum[i] = preSum[i<span class="hljs-number">-1</span>] + num[i<span class="hljs-number">-1</span>];<br><span class="hljs-comment">//注意的是数组大小：原数组+1</span><br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>适用情况：查询i-j之间的和</li>
+</ol>
+<h3 id="2、题目"><a href="#2、题目" class="headerlink" title="2、题目"></a>2、题目</h3><p><a href="https://leetcode.cn/problems/range-sum-query-immutable/">检索一维数组</a></p>
+<p><a href="https://leetcode.cn/problems/range-sum-query-2d-immutable/">检索二维数组</a></p>
+<p>思路：某段l…r区域和就是以下，本质上是几个0…i之间进行加减</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">pre[r+<span class="hljs-number">1</span>] - pre[l]<br></code></pre></td></tr></table></figure>
+
+<h2 id="四、差分数组"><a href="#四、差分数组" class="headerlink" title="四、差分数组"></a>四、差分数组</h2><h3 id="1、介绍-1"><a href="#1、介绍-1" class="headerlink" title="1、介绍"></a>1、介绍</h3><ol>
+<li>是什么？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//数组当前位值和前一位值之差</span><br>diff[i] = num[i] - num[i<span class="hljs-number">-1</span>];<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>什么用处？</li>
+</ol>
+<p>对某区间进行频繁增减</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//举例：在全范围上增加某个值num;</span><br>diff[<span class="hljs-number">0</span>]+=num;<br><span class="hljs-comment">//在1...3上增加某个值num</span><br>diff[<span class="hljs-number">1</span>]+=num;<br>diff[<span class="hljs-number">4</span>]-=num;<br><span class="hljs-comment">//进而在i...j上增加某值num</span><br>diff[i]+=num;<br>diff[j+<span class="hljs-number">1</span>]-=num;<br></code></pre></td></tr></table></figure>
+
+<h3 id="2、题目-1"><a href="#2、题目-1" class="headerlink" title="2、题目"></a>2、题目</h3><p><a href="https://leetcode.cn/problems/car-pooling/">拼车</a></p>
+<p><a href="https://leetcode.cn/problems/corporate-flight-bookings/">航班预定</a></p>
+<p>思路：创建一个差分类，差分类的方法increase进行频繁调用</p>
+<h2 id="五、滑动窗口"><a href="#五、滑动窗口" class="headerlink" title="五、滑动窗口"></a>五、滑动窗口</h2><h3 id="1、介绍-2"><a href="#1、介绍-2" class="headerlink" title="1、介绍"></a>1、介绍</h3><ol>
+<li>什么是滑动窗口</li>
+</ol>
+<p>有两个指针left和right，right先进行移动，在满足某种条件后left再进行移动，left和right都是只增不减的</p>
+<ol start="2">
+<li>有什么用</li>
+</ol>
+<p>对满足某条件的字符串进行查找</p>
+<h3 id="2、题目-2"><a href="#2、题目-2" class="headerlink" title="2、题目"></a>2、题目</h3><p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">无重复最长子串</a></p>
+<p><a href="https://leetcode.cn/problems/minimum-window-substring/">最小覆盖子串</a></p>
+<p><a href="https://leetcode.cn/problems/permutation-in-string/">字符串排列</a></p>
+<p><a href="https://leetcode.cn/problems/find-all-anagrams-in-a-string/">异位词</a></p>
+<h2 id="六、滑动窗口的延伸"><a href="#六、滑动窗口的延伸" class="headerlink" title="六、滑动窗口的延伸"></a>六、滑动窗口的延伸</h2><h2 id="七、二维数组的花式遍历"><a href="#七、二维数组的花式遍历" class="headerlink" title="七、二维数组的花式遍历"></a>七、二维数组的花式遍历</h2><p>1、反转单词，单词之间顺序反转，单词内部顺序不反转</p>
+<p><a href="https://leetcode.cn/problems/reverse-words-in-a-string/">反转单词</a></p>
+<p>思路：字符串反转+每个单词反转</p>
+<p>怎么减去中间多余空格？</p>
+<p>利用前面学的快慢指针原地删除的机制，就能删除之间和前置空格</p>
+<p>2、进行螺旋遍历</p>
+<p>思路：if条件为啥是那样的？说明存在这一行。</p>
+<h3 id="滑动窗口的延伸"><a href="#滑动窗口的延伸" class="headerlink" title="滑动窗口的延伸"></a>滑动窗口的延伸</h3><p>1、对于什么题目？</p>
+<p>查找是否存在重复序列</p>
+<p>2、什么思路？</p>
+<p>有个映射的手法，加速了窗口内字符串截取过程，变成数字的变化映射。</p>
+<p>利用滑动窗口框架，扩大时候更新窗口的映射值，缩小时候检验映射值是否相等，更新映射</p>
+<h3 id="二叉搜索"><a href="#二叉搜索" class="headerlink" title="二叉搜索"></a>二叉搜索</h3><p>1、是什么？</p>
+<p>主要就是将数据每次分成两堆进行查找</p>
+<p>2、细节</p>
+<ul>
+<li><p>应用if else if 而不用else标明每种情况</p>
+</li>
+<li><p>while里面符号和什么有关</p>
+</li>
+<li><p>if else if里面的符号和什么有关</p>
+</li>
+</ul>
+<p>3、怎么查找左边界</p>
+<p>4、怎么查找有边界</p>
+<p>1，1，1，2，2，2，2，3，3，3，3</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> res;<br><span class="hljs-keyword">while</span>(left &lt;= right)&#125;&#123;<br>    <span class="hljs-type">int</span> mid = left + (right - left)/<span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(num[mid]&gt;=target)&#123;<br>       res = res&gt;mid?mid:res;<br>       right = mid - <span class="hljs-number">1</span>;<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>       left = mid +<span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="带权重的随机算法"><a href="#带权重的随机算法" class="headerlink" title="带权重的随机算法"></a>带权重的随机算法</h3><p>1、题意是什么？</p>
+<p>实现函数，随机返回一个下标i，下标的权重为对应的num[i]</p>
+<p>2、子问题</p>
+<p>生成随机数</p>
+<p>随机数落入某权重区间就为该下标</p>
+<ul>
+<li>生成随机数</li>
+</ul>
+<p>应该在0…preSum[n]</p>
+<ul>
+<li>判断在某区间</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//生成随</span><br>mt19937 gen;<br>uniform_int_distribution&lt;<span class="hljs-type">int</span>&gt; dis;<br><br><span class="hljs-built_in">gen</span>(random_device&#123;&#125;())<br>uniform_int_distribution&lt;<span class="hljs-type">int</span>&gt; dis;<br><span class="hljs-built_in">accumulate</span>(<span class="hljs-built_in">begin</span>(),<span class="hljs-built_in">end</span>(),<span class="hljs-number">0</span>)<br><span class="hljs-built_in">partial_sum</span>(<span class="hljs-built_in">begin</span>(),<span class="hljs-built_in">end</span>(),res_iter);<br><span class="hljs-built_in">back_inserter</span>(pre);<br><span class="hljs-built_in">lower_bound</span>(<span class="hljs-built_in">begin</span>(),<span class="hljs-built_in">end</span>(),x)<br></code></pre></td></tr></table></figure>
+
+<h3 id="数组9"><a href="#数组9" class="headerlink" title="数组9"></a>数组9</h3><p>[在D天送达包裹的能力](<a href="https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/">1011. 在 D 天内送达包裹的能力 - 力扣（LeetCode）</a>)</p>
+<p>题意：每天对包裹进行不超过运载能力进行运载，给出days天运送完所有包裹的最低运载能力</p>
+<p>当时想法：就是在包裹中切days-1刀，求得怎么切才使阈值最小。然而想不出有什么策略进行切割</p>
+<p>官方思路：用二分法，在某一运载能力之前不能n天运完，之后能n天运完</p>
+<p>题目难点：神来之笔，so amazing</p>
+<h3 id="数组10"><a href="#数组10" class="headerlink" title="数组10"></a>数组10</h3><p>[田忌赛马](<a href="https://leetcode.cn/problems/advantage-shuffle/">力扣 (leetcode.cn)</a>)</p>
+<p>题意：交换数组元素的顺序使得num1[i]&gt;num2[i]的数量最多</p>
+<p>当时想法：想不出什么好的策略</p>
+<p>官方思路：</p>
+<p>     双发最大的进行比较，比得过最大的上，比不过最小的上</p>
+<p>题目难点：使得利益最大化，在于能赢就赢，赢不了就减少损失。</p>
+<h3 id="数组11"><a href="#数组11" class="headerlink" title="数组11"></a>数组11</h3><p>[设计增删返回随机元素平均都为o(1)的数据结构](<a href="https://leetcode.cn/problems/insert-delete-getrandom-o1/">380. O(1) 时间插入、删除和获取随机元素 - 力扣（LeetCode）</a>)</p>
+<p>题意：设计一种数据结构使得增、删和随机返回一个元素都为O(1)的事件复杂度</p>
+<p>当时想法：第一时间想到哈希表来进行增删操作，但是如何随机返回一个元素也为O(1)想不到的</p>
+<p>官方答案的思路：</p>
+<ol>
+<li>怎么进行随机返回一个元素？</li>
+</ol>
+<p>用数组来存储元素，首先数组在增，删操作都可以实现O(1)，然后利用数组的优势生成数组长度内的随机数，则可以O(1)的时间复杂度。</p>
+<p>题目难点：数组的使用真是神来之笔</p>
+<p>[不选择黑名单](<a href="https://leetcode.cn/problems/random-pick-with-blacklist/">710. 黑名单中的随机数 - 力扣（LeetCode）</a>)</p>
+<p>题意：给一个n和黑名单，在0-n范围上，随机抽取返回不是黑名单中的数</p>
+<p>当时想法：做一个白名单数组，在上面随机抽取。但是出现内存限制，则需要不创建数组的情况下随机抽取，就没有想法了</p>
+<p>官方思路：</p>
+<ol>
+<li>怎么才能不抽到黑名单的数？</li>
+</ol>
+<p>对黑名单的数进行映射到白名单</p>
+<ol start="2">
+<li>怎么映射？</li>
+</ol>
+<p>在n-1往前找到是白名单的数，然后进行映射</p>
+<p>题目难点：想不到还有映射的方法，真是太巧妙了</p>
+<h2 id="数组12"><a href="#数组12" class="headerlink" title="数组12"></a>数组12</h2><p>[去除重复字母](<a href="https://leetcode.cn/problems/remove-duplicate-letters/">316. 去除重复字母 - 力扣（LeetCode）</a>)</p>
+<p>题意：去除字符串的重复字符，返回字典序最小的没有重复的字符。</p>
+<p>当时想法：没什么想法，上来感觉要用哈希表去重，但始终想不到怎么得到字典序最小的组合。</p>
+<p>以下是官方答案的思路：</p>
+<ol>
+<li>   如何实现不重复？如何实现相对次序不变？</li>
+</ol>
+<p>使用栈的概念，记录栈中元素。</p>
+<ol>
+<li>怎么实现字典序最小呢？</li>
+</ol>
+<p>前提是顺序的时候字典序最小。遍历字符，来一个字符若为顺序，压入栈中；来一个字符时候如果逆序，看后面是否出现栈顶元素，若有，则弹出栈顶，一直到没有栈顶元素或小于栈顶元素或栈为空时候，然后压入该字符。直到遍历完所有字符。</p>
+<p>题目难点：对于栈机制的使用，对于贪心策略很难想到。</p>
+<hr>
+<p>总结：数组所涉及的算法</p>
+<p>快慢指针和左右指针，对于删除&#x2F;查找类型</p>
+<p>前缀和数组，对于某区间内是sum</p>
+<p>差分数组，对于某区间进行频繁的修改</p>
+<p>旋转矩阵逆时针遍历</p>
+<p>滑动窗口</p>
+<p>查找重复的序列</p>
+<p>二分搜索</p>
+<p>随机返回</p>
+<p>二分搜索的应用</p>
+<p>田忌赛马</p>
+<p>常数时间返回随机数</p>
+<p>去重的返回字典序最小</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%88%B7%E9%A2%98/" class="category-chain-item">刷题</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/07/06/%E5%8F%8D%E6%80%9D/" title="复盘原则">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">复盘原则</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/07/05/%E9%93%BE%E8%A1%A8/" title="链表总结">
+                        <span class="hidden-mobile">链表总结</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

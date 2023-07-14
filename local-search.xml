@@ -4,6 +4,158 @@
   
   
   <entry>
+    <title>git怎么用</title>
+    <link href="/2023/07/14/git%E6%80%8E%E4%B9%88%E7%94%A8/git%E6%80%8E%E4%B9%88%E7%94%A8/"/>
+    <url>/2023/07/14/git%E6%80%8E%E4%B9%88%E7%94%A8/git%E6%80%8E%E4%B9%88%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="git怎么用"><a href="#git怎么用" class="headerlink" title="git怎么用"></a>git怎么用</h1><p>版本控制系统：可以回溯以前的代码以及多人合作写代码</p><p>不需要联网</p><p><img src="/image1.png" alt="1"></p><p>主要有三个地方</p><p>remote</p><p>repository</p><p>workspace</p><h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">git status<br>git <span class="hljs-keyword">add</span><br>git <span class="hljs-keyword">commit</span><br></code></pre></td></tr></table></figure><p>回溯</p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs applescript">git reflog <span class="hljs-comment">#版本号</span><br>git <span class="hljs-built_in">log</span> <br>git <span class="hljs-built_in">log</span> <span class="hljs-comment">--pretty=oneline</span><br>git reset <span class="hljs-comment">--hard 版本号</span><br>git push -f<br></code></pre></td></tr></table></figure><p>撤销修改到暂存–没有commit之前</p><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">git checkout <span class="hljs-comment">--file</span><br></code></pre></td></tr></table></figure><p>删除</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">rm</span><br></code></pre></td></tr></table></figure><p>关联远程</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">git remote add origin url<br>git push -u origin <span class="hljs-keyword">master</span><br><span class="hljs-title">git</span> push origin <span class="hljs-keyword">master</span> <span class="hljs-title"></span><br></code></pre></td></tr></table></figure><p>创建分支</p><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">git checkout -<span class="hljs-keyword">b </span>dev <span class="hljs-comment">#创建一个名为dev的分支</span><br><br>git merge dev<span class="hljs-comment">#合并分支,版本号消失</span><br><br>git merge -no-ff -m <span class="hljs-string">&quot;&quot;</span> dev<span class="hljs-comment">#版本号还在</span><br><br>git <span class="hljs-keyword">branch </span>-d dev<span class="hljs-comment">#删除分支</span><br><br><br><span class="hljs-comment"># 多人合作</span><br><br>git checkout –<span class="hljs-keyword">b </span>dev <span class="hljs-keyword">origin/dev</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>收获</title>
+    <link href="/2023/07/13/%E6%94%B6%E8%8E%B7/"/>
+    <url>/2023/07/13/%E6%94%B6%E8%8E%B7/</url>
+    
+    <content type="html"><![CDATA[<p>以结果为导向做事情，注意力放在做事情上面，而不是怎么做？做不好</p><p>多线程思维，将研究生看做是工作。</p><p>2023&#x2F;7&#x2F;13</p><p>今天论文没中，感觉很失落，但是并没有想象中的那样痛苦，说明冒险后的失败并不像那样感觉天塌下来。如tal老师说的去尝试，去解决，去冒险真是这样的。</p><p>另一种感触就是生活是自己的责任，没人会来替你活一天。如论文没中的后，感觉世界都是孤零零的，也没人安慰什么的，是的没人会替你承担。</p><p>另一种感触是失落过后，是越沉思越难受，感觉思想变得狭隘，而将结果作为导向，注意力放在做事情上面，感觉更好了，并且更有动力，思考也更积极</p><p>我也是学着把研究生看作一种工作，培养多线程思维。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>成长</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2023 7.10-7.16</title>
+    <link href="/2023/07/10/%E6%97%A5%E5%B8%B8/%E7%AC%AC%E4%BA%8C%E5%91%A87.10-7.16/"/>
+    <url>/2023/07/10/%E6%97%A5%E5%B8%B8/%E7%AC%AC%E4%BA%8C%E5%91%A87.10-7.16/</url>
+    
+    <content type="html"><![CDATA[<h1 id="第二周7-10-7-16"><a href="#第二周7-10-7-16" class="headerlink" title="第二周7.10-7.16"></a>第二周7.10-7.16</h1><p>上周我学到了哪些？</p><p>一时间想不起来。。。</p><p>每天都要对前面的内容进行总结反思，否则就是原地踏步。</p><p>总结反思，提问题。提出目标，并一步一步地完成————真正的学习的时候是总结反思的时候，而常常对该过程不太重视。</p><p>每日写下3件好事，写出它们的原因————-欣赏美好之处，培养优势，才能看到美好和价值，认为一切都是理所应当的话，就看不到它们的价值和美好。</p><p>上周我做的好的事情：我更加自律积极了，我花更多时间在学习上。我依旧保持每周3次的锻炼，我能养成习惯并改变，这是最好的证明。</p><p>这周严防死守</p><p>总结</p><p>写下好事</p><p>冥想</p><p>定时做事情，很容易忘记要做什么，目标是什么。</p><p>我的目的是什么？</p><p>提升专业技能，培养积极情绪</p><h2 id="本周待做："><a href="#本周待做：" class="headerlink" title="本周待做："></a>本周待做：</h2><ul><li><input disabled="" type="checkbox"> 二叉树刷完+图至少一半</li><li><input disabled="" type="checkbox"> 总结链表+数组+二叉树的题目题型</li><li><input disabled="" type="checkbox"> 每天坚持进行冥想</li><li><input disabled="" type="checkbox"> 锻炼3次</li><li><input disabled="" type="checkbox"> 早睡早起</li><li><input disabled="" type="checkbox"> 每日欣赏照片1节</li></ul><h2 id="7-10"><a href="#7-10" class="headerlink" title="7.10"></a>7.10</h2><p>今日待做：</p><ul><li><p><input disabled="" type="checkbox"> 完成两节刷题</p></li><li><p><input disabled="" type="checkbox"> 做课程作业</p></li><li><p><input disabled="" type="checkbox"> 冥想+行走+饮食+睡觉</p></li><li><p><input checked="" disabled="" type="checkbox"> 早睡早起</p></li><li><p><input disabled="" type="checkbox"> 欣赏照片1节</p></li></ul><p>对事件的评估：</p><p>围绕目的来进行评估，客观可衡量</p><p>刷题</p><p>讲了什么？</p><p>用了什么技巧？</p><p>怎么运用？</p><h4 id="做项目"><a href="#做项目" class="headerlink" title="做项目"></a>做项目</h4><p>要做什么？</p><p>怎么做的？</p><h4 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h4><p>状态怎么样？</p><p>每个动作怎么样？</p><h4 id="冥想"><a href="#冥想" class="headerlink" title="冥想"></a>冥想</h4><p>是否进行10min？</p><p>是否进行行走冥想？</p><p>是否进行饮食冥想？</p><p>你的感觉是怎么样的？你有什么新发现吗？</p><h4 id="欣赏3节照片"><a href="#欣赏3节照片" class="headerlink" title="欣赏3节照片"></a>欣赏3节照片</h4><p>照片主题是什么？</p><p>用什么手法突出主题，简化其他的？</p><p>你喜欢这张照片吗？</p><p>本周感觉不能完成任务</p><h2 id="7-11"><a href="#7-11" class="headerlink" title="7.11"></a>7.11</h2><ul><li><p><input checked="" disabled="" type="checkbox"> 刷一节lc</p></li><li><p><input checked="" disabled="" type="checkbox"> 锻炼</p></li><li><p><input disabled="" type="checkbox"> 课程作业</p></li><li><p><input disabled="" type="checkbox"> 冥想</p></li><li><p><input disabled="" type="checkbox"> 欣赏照片</p></li></ul><h3 id="昨天学到了什么？"><a href="#昨天学到了什么？" class="headerlink" title="昨天学到了什么？"></a>昨天学到了什么？</h3><p>应该把心灵训练放在重要位置。</p><p>承担起自己的责任，积极主动。记笔记，提问题，你就是负责人。</p><p>反思总结</p><p>对事件的评估：</p><p>围绕目的来进行评估，客观可衡量</p><p>刷题</p><p>讲了什么？</p><p>用了什么技巧？</p><p>怎么运用？</p><h4 id="做项目-1"><a href="#做项目-1" class="headerlink" title="做项目"></a>做项目</h4><p>要做什么？</p><p>怎么做的？</p><h4 id="锻炼-1"><a href="#锻炼-1" class="headerlink" title="锻炼"></a>锻炼</h4><p>状态怎么样？</p><p>每个动作怎么样？</p><h4 id="冥想-1"><a href="#冥想-1" class="headerlink" title="冥想"></a>冥想</h4><p>是否进行10min？</p><p>是否进行行走冥想？</p><p>是否进行饮食冥想？</p><p>你的感觉是怎么样的？你有什么新发现吗？</p><h4 id="欣赏3节照片-1"><a href="#欣赏3节照片-1" class="headerlink" title="欣赏3节照片"></a>欣赏3节照片</h4><p>照片主题是什么？</p><p>用什么手法突出主题，简化其他的？</p><p>你喜欢这张照片吗？</p><p>本周感觉不能完成任务</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>复盘</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>积极心理学</title>
+    <link href="/2023/07/08/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/"/>
+    <url>/2023/07/08/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/</url>
+    
+    <content type="html"><![CDATA[<h1 id="积极心理学"><a href="#积极心理学" class="headerlink" title="积极心理学"></a>积极心理学</h1><h2 id="承担自己的责任"><a href="#承担自己的责任" class="headerlink" title="承担自己的责任"></a>承担自己的责任</h2><h3 id="这是提高自尊和幸福的关键"><a href="#这是提高自尊和幸福的关键" class="headerlink" title="这是提高自尊和幸福的关键"></a>这是提高自尊和幸福的关键</h3><p>没人会来替你过一天，你的人生完全取决于你</p><ul><li><p>去面对，去尝试，去冒险。learn to fail，or fail to learn.</p></li><li><p>思考反思</p></li><li><p>提问题，问题引导我们的关注点，创造现实。欣赏事情的价值美好之处，培养我们的优势</p></li><li><p>培养乐观。写乐观日记。</p></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>成长</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>2023.7.3-7.9</title>
+    <link href="/2023/07/06/%E6%97%A5%E5%B8%B8/%E7%AC%AC%E4%B8%80%E5%91%A87.3-7.9/"/>
+    <url>/2023/07/06/%E6%97%A5%E5%B8%B8/%E7%AC%AC%E4%B8%80%E5%91%A87.3-7.9/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2023-7-3-7-9"><a href="#2023-7-3-7-9" class="headerlink" title="2023.7.3-7.9"></a>2023.7.3-7.9</h1><h2 id="本周要干什么？"><a href="#本周要干什么？" class="headerlink" title="本周要干什么？"></a>本周要干什么？</h2><ul><li><p><input disabled="" type="checkbox"> 完成二叉树刷题</p></li><li><p><input disabled="" type="checkbox"> 将前面数组和链表的技巧进行总结</p></li><li><p><input disabled="" type="checkbox"> 项目上对抽象语法树的结构进行分析</p></li><li><p><input disabled="" type="checkbox"> 冥想并融入生活</p></li><li><p><input disabled="" type="checkbox"> 锻炼3次</p></li><li><p><input disabled="" type="checkbox"> 每天早睡早起</p></li><li><p><input disabled="" type="checkbox"> 欣赏3节照片，拿相机出去走一下午</p></li></ul><h2 id="如何评价我要干的事情？"><a href="#如何评价我要干的事情？" class="headerlink" title="如何评价我要干的事情？"></a>如何评价我要干的事情？</h2><h3 id="1、刷题-x2F-总结刷题-x2F-项目"><a href="#1、刷题-x2F-总结刷题-x2F-项目" class="headerlink" title="1、刷题&#x2F;总结刷题&#x2F;项目"></a>1、刷题&#x2F;总结刷题&#x2F;项目</h3><p>每日做计划，做事，总结，评估进度</p><h3 id="2、正念冥想"><a href="#2、正念冥想" class="headerlink" title="2、正念冥想"></a>2、正念冥想</h3><p>应该做记录，记录当时的感觉什么？感觉到什么平常没有发现的事物？有什么好的地方可以跟进，什么做的不好的地方可以改善？</p><p>享受吃饭、走路的每分每秒。</p><h3 id="3、锻炼"><a href="#3、锻炼" class="headerlink" title="3、锻炼"></a>3、锻炼</h3><ul><li><p>训练时候状态</p></li><li><p>训练时候动作和重量</p></li></ul><h2 id="4、早起早睡"><a href="#4、早起早睡" class="headerlink" title="4、早起早睡"></a>4、早起早睡</h2><p>做记录</p><h2 id="5、出去走走"><a href="#5、出去走走" class="headerlink" title="5、出去走走"></a>5、出去走走</h2><p>记录+拍照</p><h2 id="7-6"><a href="#7-6" class="headerlink" title="7.6"></a>7.6</h2><h4 id="今日待做"><a href="#今日待做" class="headerlink" title="今日待做"></a>今日待做</h4><ul><li><p><input checked="" disabled="" type="checkbox"> 刷题一节</p></li><li><p><input checked="" disabled="" type="checkbox"> 复习数组</p></li><li><p><input checked="" disabled="" type="checkbox"> 冥想</p></li><li><p><input checked="" disabled="" type="checkbox"> 早睡早起</p></li><li><p><input disabled="" type="checkbox"> 欣赏三节照片</p></li></ul><h4 id="评价记录"><a href="#评价记录" class="headerlink" title="评价记录"></a>评价记录</h4><h4 id="刷题："><a href="#刷题：" class="headerlink" title="刷题："></a>刷题：</h4><ol><li><p>讲了是什么？</p></li><li><p>学到有什么技巧？</p></li><li><p>相关的例子</p></li></ol><p>须做完一节并回答上面的问题</p><h4 id="复习数组"><a href="#复习数组" class="headerlink" title="复习数组"></a>复习数组</h4><ol><li><p>讲了什么内容？</p></li><li><p>有什么技巧的方法，特点</p></li><li><p>相关的例子</p></li></ol><p>须完成对数组的总结，回答上面的问题</p><h4 id="冥想"><a href="#冥想" class="headerlink" title="冥想"></a>冥想</h4><ol><li><p>是否进行10min冥想？</p></li><li><p>是否享受吃饭</p></li><li><p>是否享受走路</p></li><li><p>你是做的，有什么感觉？当时心情是怎么样的？</p></li><li><p>发现了哪些新事物</p></li></ol><p>发现了落叶有很多都是绿色的</p><h3 id="欣赏照片"><a href="#欣赏照片" class="headerlink" title="欣赏照片"></a>欣赏照片</h3><ol><li><p>这张图片怎么简洁突出主题的？</p></li><li><p>你喜欢这张照片吗？</p></li><li><p>有什么学到的角度，远近，构图等，如果是你，你该怎么拍？</p></li></ol><h4 id="早睡早起"><a href="#早睡早起" class="headerlink" title="早睡早起"></a>早睡早起</h4><p>对睡觉时间进行记录</p><p>所以昨天完成了5项任务。放松之后找不到状态。</p><h2 id="7-7"><a href="#7-7" class="headerlink" title="7.7"></a>7.7</h2><h3 id="今日待做-1"><a href="#今日待做-1" class="headerlink" title="今日待做"></a>今日待做</h3><ul><li><p><input disabled="" type="checkbox"> 复习前面的内容&#x2F;刷三篇题目</p></li><li><p><input checked="" disabled="" type="checkbox"> 锻炼</p></li><li><p><input disabled="" type="checkbox"> 冥想+走路+吃饭</p></li><li><p><input checked="" disabled="" type="checkbox"> 早睡早起</p></li><li><p><input disabled="" type="checkbox"> 欣赏三节照片</p></li></ul><h3 id="评价记录-1"><a href="#评价记录-1" class="headerlink" title="评价记录"></a>评价记录</h3><h4 id="刷题-复习"><a href="#刷题-复习" class="headerlink" title="刷题+复习"></a>刷题+复习</h4><ol><li><p>讲了什么事情？</p></li><li><p>有什么方法技巧？</p></li><li><p>什么情况会运用？怎么应用这些技巧？</p></li></ol><h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><ol><li><p>要做什么事情？</p></li><li><p>怎么做？</p></li><li><p>学到什么？</p></li></ol><h3 id="锻炼"><a href="#锻炼" class="headerlink" title="锻炼"></a>锻炼</h3><ol><li><p>状态怎么样？</p></li><li><p>怎么调整状态？</p></li><li><p>记录动作和次数</p></li></ol><p>锻炼时候起初一直有想法认为锻炼无意义，做的时候没力气了，就会做的很差。</p><p>再投入对动作的注意后，就会好很多。</p><h3 id="冥想-1"><a href="#冥想-1" class="headerlink" title="冥想"></a>冥想</h3><ol><li><p>是否进行10min冥想？</p></li><li><p>是否进行一次行走冥想？</p></li><li><p>是否进行一次吃饭冥想？</p></li><li><p>当时的感觉是什么？是否想再来一次？发现了哪些新事物？</p></li></ol><h3 id="欣赏照片-1"><a href="#欣赏照片-1" class="headerlink" title="欣赏照片"></a>欣赏照片</h3><ol><li><p>怎么突出简洁主题的？</p></li><li><p>你喜欢这张照片吗？</p></li><li><p>这照片采用什么角度，什么构图，对焦，快门？</p></li></ol><h2 id="7-8"><a href="#7-8" class="headerlink" title="7.8"></a>7.8</h2><h3 id="今日待做-2"><a href="#今日待做-2" class="headerlink" title="今日待做"></a>今日待做</h3><ul><li><p><input disabled="" type="checkbox"> 刷题四道+复习数组</p></li><li><p><input disabled="" type="checkbox"> 冥想+融入生活</p></li><li><p><input checked="" disabled="" type="checkbox"> 早睡早起</p></li><li><p><input disabled="" type="checkbox"> 学摄影</p></li></ul><h4 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h4><ul><li><p>讲了什么？</p></li><li><p>有什么技巧</p></li><li><p>怎么运用？</p></li></ul><h4 id="冥想-2"><a href="#冥想-2" class="headerlink" title="冥想"></a>冥想</h4><ul><li>是否进行10min？</li></ul><p>是</p><ul><li><p>是否进行行走冥想？</p></li><li><p>是否进行走路冥想</p></li></ul><p>冥想时候是什么感觉？放松还是紧张，发现什么新事物？</p><h4 id="早睡早起-1"><a href="#早睡早起-1" class="headerlink" title="早睡早起"></a>早睡早起</h4><p>12点睡8点起</p><h4 id="学摄影"><a href="#学摄影" class="headerlink" title="学摄影"></a>学摄影</h4><ul><li><p>讲了什么？</p></li><li><p>学到什么技巧？</p></li><li><p>别人是如何运用？我该怎么运用？</p></li></ul><h2 id="7-9"><a href="#7-9" class="headerlink" title="7.9"></a>7.9</h2><h3 id="今日待做-3"><a href="#今日待做-3" class="headerlink" title="今日待做"></a>今日待做</h3><ul><li><p><input disabled="" type="checkbox"> 刷题</p></li><li><p><input checked="" disabled="" type="checkbox"> 做项目</p></li><li><p><input disabled="" type="checkbox"> 冥想</p></li><li><p><input checked="" disabled="" type="checkbox"> 锻炼</p></li><li><p><input checked="" disabled="" type="checkbox"> 早睡早起</p></li><li><p><input disabled="" type="checkbox"> 欣赏3节照片</p></li></ul><h4 id="刷题-1"><a href="#刷题-1" class="headerlink" title="刷题"></a>刷题</h4><p>讲了什么？</p><p>用了什么技巧？</p><p>怎么运用？</p><h4 id="做项目"><a href="#做项目" class="headerlink" title="做项目"></a>做项目</h4><p>要做什么？</p><p>怎么做的？</p><h4 id="锻炼-1"><a href="#锻炼-1" class="headerlink" title="锻炼"></a>锻炼</h4><p>状态怎么样？</p><p>每个动作怎么样？</p><h4 id="冥想-3"><a href="#冥想-3" class="headerlink" title="冥想"></a>冥想</h4><p>是否进行10min？</p><p>是否进行行走冥想？</p><p>是否进行饮食冥想？</p><p>你的感觉是怎么样的？你有什么新发现吗？</p><h4 id="欣赏3节照片"><a href="#欣赏3节照片" class="headerlink" title="欣赏3节照片"></a>欣赏3节照片</h4><p>照片主题是什么？</p><p>用什么手法突出主题，简化其他的？</p><p>你喜欢这张照片吗？</p><p>本周感觉不能完成任务</p><p>我的目的是什么？提升编程能力，培养积极情绪，更加专注和快乐。</p><p>我计划做哪些事情来完成这些目的？刷题，做项目，冥想，锻炼</p><p>感觉我还是没有全心投入这个做事情。下周我该怎么做还是做这些事情，每天直到要做什么？做完事情记录总结。</p><p>总结就是：不去做和总结，起先的理论都会忘记。无论是积极心理学，冥想还是其他看书的一些体验和感悟。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>复盘</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>复盘原则</title>
+    <link href="/2023/07/06/%E5%8F%8D%E6%80%9D/"/>
+    <url>/2023/07/06/%E5%8F%8D%E6%80%9D/</url>
+    
+    <content type="html"><![CDATA[<h1 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h1><h2 id="为什么要反思？"><a href="#为什么要反思？" class="headerlink" title="为什么要反思？"></a>为什么要反思？</h2><p>根据小鼠实验，真正学习的阶段在于反思总结阶段。提升思考，提炼规律</p><h2 id="怎么复盘？"><a href="#怎么复盘？" class="headerlink" title="怎么复盘？"></a>怎么复盘？</h2><h3 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h3><p>小事即使复盘，大事阶段性复盘，事后全面复盘</p><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="1、这周我要做什么？列出列表记下来。"><a href="#1、这周我要做什么？列出列表记下来。" class="headerlink" title="1、这周我要做什么？列出列表记下来。"></a>1、这周我要做什么？列出列表记下来。</h4><p>做事前的目标是什么？做的时候是否真的在向目标靠近？</p><p>有的时候做事情做着做着就只想把事情做完，而不是在于做事的效果。</p><ul><li><p>看剧，打游戏。本来是想获得愉快，结果就想把它看完，最后并没有想象中愉快</p></li><li><p>刷题，写blog也要避免出现这种情况</p></li></ul><h4 id="2、这些事情要怎么去评估做事效果？"><a href="#2、这些事情要怎么去评估做事效果？" class="headerlink" title="2、这些事情要怎么去评估做事效果？"></a>2、这些事情要怎么去评估做事效果？</h4><p>指出做这件事情的客观指标</p><h3 id="3、对比"><a href="#3、对比" class="headerlink" title="3、对比"></a>3、对比</h3><p>对比现实和指标，评价做事情的效果 </p><h3 id="4、更新指标和目标"><a href="#4、更新指标和目标" class="headerlink" title="4、更新指标和目标"></a>4、更新指标和目标</h3><p>每周思考这些指标和目标是否符合预期，是否需要调整</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>复盘</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>数组总结</title>
+    <link href="/2023/07/05/%E6%95%B0%E7%BB%84/"/>
+    <url>/2023/07/05/%E6%95%B0%E7%BB%84/</url>
+    
+    <content type="html"><![CDATA[<h1 id="数组总结"><a href="#数组总结" class="headerlink" title="数组总结"></a>数组总结</h1><h2 id="一、快慢指针技巧"><a href="#一、快慢指针技巧" class="headerlink" title="一、快慢指针技巧"></a>一、快慢指针技巧</h2><h4 id="原地删除相同的元素-x2F-移除某元素-x2F-移动0"><a href="#原地删除相同的元素-x2F-移除某元素-x2F-移动0" class="headerlink" title="原地删除相同的元素&#x2F;移除某元素&#x2F;移动0"></a>原地删除相同的元素&#x2F;移除某元素&#x2F;移动0</h4><p><a href="https://leetcode.cn/problems/remove-duplicates-from-sorted-array/">原地删除相同的元素</a></p><p><a href="https://leetcode.cn/problems/remove-element/">移除某元素</a></p><p><a href="https://leetcode.cn/problems/move-zeroes/">移动0</a></p><p>思路：fast一直遍历整个数组，slow遍历到不同元素的下一位</p><h2 id="二、左右指针技巧"><a href="#二、左右指针技巧" class="headerlink" title="二、左右指针技巧"></a>二、左右指针技巧</h2><h3 id="1、二分寻找和为target的两数"><a href="#1、二分寻找和为target的两数" class="headerlink" title="1、二分寻找和为target的两数"></a>1、二分寻找和为target的两数</h3><p><a href="https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/">寻找和</a></p><p>思路：左右指针，相加得到sum，比较sum和target大小</p><h3 id="2、寻找最长回文子串"><a href="#2、寻找最长回文子串" class="headerlink" title="2、寻找最长回文子串"></a>2、寻找最长回文子串</h3><p><a href="https://leetcode.cn/problems/longest-palindromic-substring/">最长回文子串</a></p><p>思路：从i位置进行扩展寻找或从i，i+1进行拓展，最长的进行更新</p><h2 id="三、前缀和数组：对某个区间进行统计"><a href="#三、前缀和数组：对某个区间进行统计" class="headerlink" title="三、前缀和数组：对某个区间进行统计"></a>三、前缀和数组：对某个区间进行统计</h2><h3 id="1、介绍"><a href="#1、介绍" class="headerlink" title="1、介绍"></a>1、介绍</h3><ol><li>是什么？怎么定义的？</li></ol><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//num[0...i-1]之和</span><br>preSum[i] = preSum[i<span class="hljs-number">-1</span>] + num[i<span class="hljs-number">-1</span>];<br><span class="hljs-comment">//注意的是数组大小：原数组+1</span><br></code></pre></td></tr></table></figure><ol start="2"><li>适用情况：查询i-j之间的和</li></ol><h3 id="2、题目"><a href="#2、题目" class="headerlink" title="2、题目"></a>2、题目</h3><p><a href="https://leetcode.cn/problems/range-sum-query-immutable/">检索一维数组</a></p><p><a href="https://leetcode.cn/problems/range-sum-query-2d-immutable/">检索二维数组</a></p><p>思路：某段l…r区域和就是以下，本质上是几个0…i之间进行加减</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp">pre[r+<span class="hljs-number">1</span>] - pre[l]<br></code></pre></td></tr></table></figure><h2 id="四、差分数组"><a href="#四、差分数组" class="headerlink" title="四、差分数组"></a>四、差分数组</h2><h3 id="1、介绍-1"><a href="#1、介绍-1" class="headerlink" title="1、介绍"></a>1、介绍</h3><ol><li>是什么？</li></ol><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//数组当前位值和前一位值之差</span><br>diff[i] = num[i] - num[i<span class="hljs-number">-1</span>];<br></code></pre></td></tr></table></figure><ol start="2"><li>什么用处？</li></ol><p>对某区间进行频繁增减</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//举例：在全范围上增加某个值num;</span><br>diff[<span class="hljs-number">0</span>]+=num;<br><span class="hljs-comment">//在1...3上增加某个值num</span><br>diff[<span class="hljs-number">1</span>]+=num;<br>diff[<span class="hljs-number">4</span>]-=num;<br><span class="hljs-comment">//进而在i...j上增加某值num</span><br>diff[i]+=num;<br>diff[j+<span class="hljs-number">1</span>]-=num;<br></code></pre></td></tr></table></figure><h3 id="2、题目-1"><a href="#2、题目-1" class="headerlink" title="2、题目"></a>2、题目</h3><p><a href="https://leetcode.cn/problems/car-pooling/">拼车</a></p><p><a href="https://leetcode.cn/problems/corporate-flight-bookings/">航班预定</a></p><p>思路：创建一个差分类，差分类的方法increase进行频繁调用</p><h2 id="五、滑动窗口"><a href="#五、滑动窗口" class="headerlink" title="五、滑动窗口"></a>五、滑动窗口</h2><h3 id="1、介绍-2"><a href="#1、介绍-2" class="headerlink" title="1、介绍"></a>1、介绍</h3><ol><li>什么是滑动窗口</li></ol><p>有两个指针left和right，right先进行移动，在满足某种条件后left再进行移动，left和right都是只增不减的</p><ol start="2"><li>有什么用</li></ol><p>对满足某条件的字符串进行查找</p><h3 id="2、题目-2"><a href="#2、题目-2" class="headerlink" title="2、题目"></a>2、题目</h3><p><a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">无重复最长子串</a></p><p><a href="https://leetcode.cn/problems/minimum-window-substring/">最小覆盖子串</a></p><p><a href="https://leetcode.cn/problems/permutation-in-string/">字符串排列</a></p><p><a href="https://leetcode.cn/problems/find-all-anagrams-in-a-string/">异位词</a></p><h2 id="六、滑动窗口的延伸"><a href="#六、滑动窗口的延伸" class="headerlink" title="六、滑动窗口的延伸"></a>六、滑动窗口的延伸</h2><h2 id="七、二维数组的花式遍历"><a href="#七、二维数组的花式遍历" class="headerlink" title="七、二维数组的花式遍历"></a>七、二维数组的花式遍历</h2><p>1、反转单词，单词之间顺序反转，单词内部顺序不反转</p><p><a href="https://leetcode.cn/problems/reverse-words-in-a-string/">反转单词</a></p><p>思路：字符串反转+每个单词反转</p><p>怎么减去中间多余空格？</p><p>利用前面学的快慢指针原地删除的机制，就能删除之间和前置空格</p><p>2、进行螺旋遍历</p><p>思路：if条件为啥是那样的？说明存在这一行。</p><h3 id="滑动窗口的延伸"><a href="#滑动窗口的延伸" class="headerlink" title="滑动窗口的延伸"></a>滑动窗口的延伸</h3><p>1、对于什么题目？</p><p>查找是否存在重复序列</p><p>2、什么思路？</p><p>有个映射的手法，加速了窗口内字符串截取过程，变成数字的变化映射。</p><p>利用滑动窗口框架，扩大时候更新窗口的映射值，缩小时候检验映射值是否相等，更新映射</p><h3 id="二叉搜索"><a href="#二叉搜索" class="headerlink" title="二叉搜索"></a>二叉搜索</h3><p>1、是什么？</p><p>主要就是将数据每次分成两堆进行查找</p><p>2、细节</p><ul><li><p>应用if else if 而不用else标明每种情况</p></li><li><p>while里面符号和什么有关</p></li><li><p>if else if里面的符号和什么有关</p></li></ul><p>3、怎么查找左边界</p><p>4、怎么查找有边界</p><p>1，1，1，2，2，2，2，3，3，3，3</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-type">int</span> res;<br><span class="hljs-keyword">while</span>(left &lt;= right)&#125;&#123;<br>    <span class="hljs-type">int</span> mid = left + (right - left)/<span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">if</span>(num[mid]&gt;=target)&#123;<br>       res = res&gt;mid?mid:res;<br>       right = mid - <span class="hljs-number">1</span>;<br>    &#125;<span class="hljs-keyword">else</span>&#123;<br>       left = mid +<span class="hljs-number">1</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="带权重的随机算法"><a href="#带权重的随机算法" class="headerlink" title="带权重的随机算法"></a>带权重的随机算法</h3><p>1、题意是什么？</p><p>实现函数，随机返回一个下标i，下标的权重为对应的num[i]</p><p>2、子问题</p><p>生成随机数</p><p>随机数落入某权重区间就为该下标</p><ul><li>生成随机数</li></ul><p>应该在0…preSum[n]</p><ul><li>判断在某区间</li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">//生成随</span><br>mt19937 gen;<br>uniform_int_distribution&lt;<span class="hljs-type">int</span>&gt; dis;<br><br><span class="hljs-built_in">gen</span>(random_device&#123;&#125;())<br>uniform_int_distribution&lt;<span class="hljs-type">int</span>&gt; dis;<br><span class="hljs-built_in">accumulate</span>(<span class="hljs-built_in">begin</span>(),<span class="hljs-built_in">end</span>(),<span class="hljs-number">0</span>)<br><span class="hljs-built_in">partial_sum</span>(<span class="hljs-built_in">begin</span>(),<span class="hljs-built_in">end</span>(),res_iter);<br><span class="hljs-built_in">back_inserter</span>(pre);<br><span class="hljs-built_in">lower_bound</span>(<span class="hljs-built_in">begin</span>(),<span class="hljs-built_in">end</span>(),x)<br></code></pre></td></tr></table></figure><h3 id="数组9"><a href="#数组9" class="headerlink" title="数组9"></a>数组9</h3><p>[在D天送达包裹的能力](<a href="https://leetcode.cn/problems/capacity-to-ship-packages-within-d-days/">1011. 在 D 天内送达包裹的能力 - 力扣（LeetCode）</a>)</p><p>题意：每天对包裹进行不超过运载能力进行运载，给出days天运送完所有包裹的最低运载能力</p><p>当时想法：就是在包裹中切days-1刀，求得怎么切才使阈值最小。然而想不出有什么策略进行切割</p><p>官方思路：用二分法，在某一运载能力之前不能n天运完，之后能n天运完</p><p>题目难点：神来之笔，so amazing</p><h3 id="数组10"><a href="#数组10" class="headerlink" title="数组10"></a>数组10</h3><p>[田忌赛马](<a href="https://leetcode.cn/problems/advantage-shuffle/">力扣 (leetcode.cn)</a>)</p><p>题意：交换数组元素的顺序使得num1[i]&gt;num2[i]的数量最多</p><p>当时想法：想不出什么好的策略</p><p>官方思路：</p><p>     双发最大的进行比较，比得过最大的上，比不过最小的上</p><p>题目难点：使得利益最大化，在于能赢就赢，赢不了就减少损失。</p><h3 id="数组11"><a href="#数组11" class="headerlink" title="数组11"></a>数组11</h3><p>[设计增删返回随机元素平均都为o(1)的数据结构](<a href="https://leetcode.cn/problems/insert-delete-getrandom-o1/">380. O(1) 时间插入、删除和获取随机元素 - 力扣（LeetCode）</a>)</p><p>题意：设计一种数据结构使得增、删和随机返回一个元素都为O(1)的事件复杂度</p><p>当时想法：第一时间想到哈希表来进行增删操作，但是如何随机返回一个元素也为O(1)想不到的</p><p>官方答案的思路：</p><ol><li>怎么进行随机返回一个元素？</li></ol><p>用数组来存储元素，首先数组在增，删操作都可以实现O(1)，然后利用数组的优势生成数组长度内的随机数，则可以O(1)的时间复杂度。</p><p>题目难点：数组的使用真是神来之笔</p><p>[不选择黑名单](<a href="https://leetcode.cn/problems/random-pick-with-blacklist/">710. 黑名单中的随机数 - 力扣（LeetCode）</a>)</p><p>题意：给一个n和黑名单，在0-n范围上，随机抽取返回不是黑名单中的数</p><p>当时想法：做一个白名单数组，在上面随机抽取。但是出现内存限制，则需要不创建数组的情况下随机抽取，就没有想法了</p><p>官方思路：</p><ol><li>怎么才能不抽到黑名单的数？</li></ol><p>对黑名单的数进行映射到白名单</p><ol start="2"><li>怎么映射？</li></ol><p>在n-1往前找到是白名单的数，然后进行映射</p><p>题目难点：想不到还有映射的方法，真是太巧妙了</p><h2 id="数组12"><a href="#数组12" class="headerlink" title="数组12"></a>数组12</h2><p>[去除重复字母](<a href="https://leetcode.cn/problems/remove-duplicate-letters/">316. 去除重复字母 - 力扣（LeetCode）</a>)</p><p>题意：去除字符串的重复字符，返回字典序最小的没有重复的字符。</p><p>当时想法：没什么想法，上来感觉要用哈希表去重，但始终想不到怎么得到字典序最小的组合。</p><p>以下是官方答案的思路：</p><ol><li>   如何实现不重复？如何实现相对次序不变？</li></ol><p>使用栈的概念，记录栈中元素。</p><ol><li>怎么实现字典序最小呢？</li></ol><p>前提是顺序的时候字典序最小。遍历字符，来一个字符若为顺序，压入栈中；来一个字符时候如果逆序，看后面是否出现栈顶元素，若有，则弹出栈顶，一直到没有栈顶元素或小于栈顶元素或栈为空时候，然后压入该字符。直到遍历完所有字符。</p><p>题目难点：对于栈机制的使用，对于贪心策略很难想到。</p><hr><p>总结：数组所涉及的算法</p><p>快慢指针和左右指针，对于删除&#x2F;查找类型</p><p>前缀和数组，对于某区间内是sum</p><p>差分数组，对于某区间进行频繁的修改</p><p>旋转矩阵逆时针遍历</p><p>滑动窗口</p><p>查找重复的序列</p><p>二分搜索</p><p>随机返回</p><p>二分搜索的应用</p><p>田忌赛马</p><p>常数时间返回随机数</p><p>去重的返回字典序最小</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>刷题</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>链表总结</title>
+    <link href="/2023/07/05/%E9%93%BE%E8%A1%A8/"/>
+    <url>/2023/07/05/%E9%93%BE%E8%A1%A8/</url>
+    
+    <content type="html"><![CDATA[<h1 id="链表题目总结"><a href="#链表题目总结" class="headerlink" title="链表题目总结"></a>链表题目总结</h1><h2 id="链表的连接："><a href="#链表的连接：" class="headerlink" title="链表的连接："></a>链表的连接：</h2><ul><li>有什么特点？</li></ul><p>    都是将链表进行重新连接，要么是不同链表的合并，要么是链表内部进行移动</p><ul><li>有什么解题手法么？</li></ul><p>    merge手法，通过对链表遍历，判断条件，然后连接到新链表。</p><p>    递归手法，对后面节点进行重复操作时候应该进行考虑</p><p>1、顺序链表的连接</p><p><a href="https://leetcode.cn/problems/merge-two-sorted-lists/">21. 合并两个有序链表 - 力扣（LeetCode）</a></p><p>题意：两个升序链表变成新的升序链表</p><p>思路：创建一个dummy node，双指针指向两条链表，进行merge过程</p><p>2、k个顺序链表的连接</p><p><a href="https://leetcode.cn/problems/merge-k-sorted-lists/">23. 合并 K 个升序链表 - 力扣（LeetCode）</a></p><p>题意：升序链表数组合并为一个升序链表</p><p>三件事情需要记住：</p><ul><li><p>比较器怎么定义？</p></li><li><p>q怎么定义？</p></li><li><p>push怎么push？</p></li></ul><p>思路：创建priority_queue，定义比较器，将所有node装入，不断弹出最小节点，并插入相应next节点，直至队列为空</p><p>3、链表的分解</p><p><a href="https://leetcode.cn/problems/partition-list/">86. 分隔链表 - 力扣（LeetCode）</a></p><p>题意：将大于x的放左边，小于的放右边</p><p>思路：创建两个node，然后遍历链表，分别在两个node上进行拼接</p><p>4、链表的反转</p><ul><li>k为一组的反转</li></ul><p>    思路：反转前k个node，然后连接后面的递归</p><ul><li>整个反转</li></ul><p>    思路：递归后n-1个node，接上第一个node</p><ul><li>前n个反转</li></ul><p>    </p><p>    思路：递归后n-1个node，然后接上后面的node</p><ul><li>m-n进行反转</li></ul><p>    思路：在m&#x3D;&#x3D;1时为base case，后面接递归</p><h2 id="链表的寻找遍历："><a href="#链表的寻找遍历：" class="headerlink" title="链表的寻找遍历："></a>链表的寻找遍历：</h2><ul><li>有什么特点？</li></ul><p>    寻找某特点的节点</p><ul><li>有什么手法？</li></ul><p>    设置快慢指针</p><p>1、链表的倒数第k个node</p><p>思路：fast遍历k次后slow开始一起遍历，fast为null时，slow为目标节点</p><p>2、链表的中点</p><p>思路：fast走两次，slow走一次</p><p>3、链表的是否有环</p><p>思路：fast走2次，slow走1次</p><p>4、链表入环节点</p><p>思路：fast走两次，slow走一次，然后fast从头和slow一起走一步，直到相等</p><p>5、链表的回文判断</p><p>思路：得到中间节点后，反转后面的节点，然后两边进行遍历比较</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>刷题</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何搭建个人博客</title>
     <link href="/2023/07/03/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <url>/2023/07/03/%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
