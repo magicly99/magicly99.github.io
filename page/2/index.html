@@ -1,844 +1,327 @@
-
-
 <!DOCTYPE html>
-<html lang="en" data-default-color-scheme=auto>
-
-
-
+<html lang=zh>
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="">
-  <meta name="keywords" content="">
-  
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="流云">
 <meta property="og:url" content="http://example.com/page/2/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-  
-  
-  
-  <title>Hexo</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
+<meta property="og:site_name" content="流云">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>流云</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
 
 
+    <!-- Umami Analytics -->
 
 
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
-
-  
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+    <div class="content index py4 h-card">
+        
+          <header id="header">
+  <a class="u-url u-uid" href="/">
   
+    
+      <img id="logo" alt class="u-logo" src="/images/logo.png" />
+    
+  
+    <div id="title">
+      <h1 class="p-name">流云</h1>
+    </div>
+  </a>
+  <div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="目录"><i class="fa-solid fa-bars fa-2x"></i></a>
+      </li>
+      <!--
+     --><li><a href="/">首页</a></li><!--
+   --><!--
+     --><li><a href="/about/">关于</a></li><!--
+   --><!--
+     --><li><a href="/archives/">归档</a></li><!--
+   --><!--
+     --><li><a href="/categories/">分类</a></li><!--
+   -->
+    </ul>
+  </div>
+</header>
 
-  <header>
+        
+        <section id="about" class="p-note">
+  
+  
+    <p>
+      在这里找到我：
+      
+      
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="http://github.com/probberechts/cactus-dark" aria-label="github" title="github">
+            <i class="fa-brands fa-github"></i><!--
+      ---></a><!--
+    ---><!--
+    --->， 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="/" aria-label="twitter" title="twitter">
+            <i class="fa-brands fa-twitter"></i><!--
+      ---></a><!--
+    ---><!--
+    --->， 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="/" aria-label="facebook" title="facebook">
+            <i class="fa-brands fa-facebook"></i><!--
+      ---></a><!--
+    ---><!--
+    --->， 
+        
+      
+        
+        
+          <a class="icon u-email" target="_blank" rel="noopener" href="mailto:name@email.com" aria-label="mail" title="mail">
+            <i class="fa-solid fa-envelope"></i><!--
+      ---></a>
+        <!--
+    --->， 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://mastodon.social/@alice" aria-label="mastodon.social" title="mastodon.social">
+            <i class="fa-brands fa-mastodon"></i><!--
+      ---></a><!--
+    ---><!--
+    ---> 和 
+        
+      
+        
+        
+          <a class="icon u-url" target="_blank" rel="noopener me" href="https://fosstodon.org/@alice" aria-label="fosstodon.org" title="fosstodon.org">
+            <i class="fa-brands fa-mastodon"></i><!--
+      ---></a><!--
+    ---><!--
+    --->.
+        
+      
+    </p>
+  
+</section>
+
+<section id="writing">
+  <span class="h1"><a href="/archives/">文章</a></span>
+  
+  <ul class="post-list">
+    
+    
+      
+    
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-04-19T08:12:31.772Z" class="dt-published" itemprop="datePublished">2024-04-19</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/04/19/%E7%94%9F%E6%B4%BB/%E8%8A%92%E6%A0%BC%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E7%BB%B4/%E8%8A%92%E6%A0%BC%E7%9A%84%E6%BC%94%E8%AE%B2-%E5%A6%82%E4%BD%95%E7%97%9B%E8%8B%A6%E7%9A%84%E5%BA%A6%E8%BF%87%E4%B8%80%E7%94%9F/">芒格的演讲-如何痛苦的度过一生</a>
     
 
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
+</span>
+      </li>
+    
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-04-17T06:46:03.051Z" class="dt-published" itemprop="datePublished">2024-04-17</time>
+        
+      
+    </div>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
+
+        <span>
+    
+        <a class="" href="/2024/04/17/%E7%94%9F%E6%B4%BB/%E4%B9%90%E8%A7%82/ABC%E8%A7%A3%E9%87%8A%E9%A3%8E%E6%A0%BC%E7%9A%84%E7%BB%83%E4%B9%A0/">ABC解释风格</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                <span>Home</span>
-              </a>
-            </li>
-          
+    <div class="meta">
+      
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>Archives</span>
-              </a>
-            </li>
-          
+          <time datetime="2024-04-17T05:40:54.417Z" class="dt-published" itemprop="datePublished">2024-04-17</time>
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                <span>Categories</span>
-              </a>
-            </li>
-          
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/04/17/%E7%94%9F%E6%B4%BB/%E4%B9%90%E8%A7%82/%E8%A7%A3%E9%87%8A%E9%A3%8E%E6%A0%BC/">解释风格</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>Tags</span>
-              </a>
-            </li>
-          
+    <div class="meta">
+      
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                <span>About</span>
-              </a>
-            </li>
-          
+          <time datetime="2024-04-17T04:44:48.415Z" class="dt-published" itemprop="datePublished">2024-04-17</time>
         
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/04/17/%E7%94%9F%E6%B4%BB/%E4%B9%90%E8%A7%82/%E7%8B%97%E7%9A%84%E6%97%A0%E5%8A%A9%E5%AE%9E%E9%AA%8C/">狗的无助实验</a>
+    
+
+
+</span>
+      </li>
+    
+      <li class="post-item">
         
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
+    <div class="meta">
+      
         
+          <time datetime="2024-04-17T03:07:58.246Z" class="dt-published" itemprop="datePublished">2024-04-17</time>
         
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/04/17/%E7%94%9F%E6%B4%BB/%E4%B9%90%E8%A7%82/%E4%B9%90%E8%A7%82/">乐观</a>
+    
+
+
+</span>
+      </li>
+    
+  </ul>
+  
+</section>
+
+
+
         
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2024
+    流云
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     -->
       </ul>
+    </nav>
+  </div>
+</footer>
+
     </div>
-  </div>
-</nav>
+    <!-- styles -->
 
-  
 
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="just for fun,you know"></span>
-          
-        </div>
 
-        
-      </div>
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
 
-</div>
+    <!-- jquery -->
 
-  </header>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
 
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
 
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/26/%E5%A4%8D%E7%9B%98/%E8%87%AA%E6%8E%A7%E5%8A%9B/" target="_self">
-          
-        </a>
-      </h2>
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/26/%E5%A4%8D%E7%9B%98/%E8%87%AA%E6%8E%A7%E5%8A%9B/" target="_self">
-        <div>
-          自控力导言主题是：自控力的运作和如何利用意志力培养好习惯 观点：  自控力很关键，决定我们做什么，吃什么，说什么。  大多数人感觉自控只是一时，力不从心的失控才是常态，被情绪，感情，想法所左右。  人们对意志力有错误的认知，错误的方法，是的可能出现做某些事出现无益反而起反作用。   深入剖析：指的是对于意志力是怎么运转的 意志力实验：去实验，什么是对的，什么有用，什么没用。 选择一个意志力挑战：
-        </div>
-      </a>
+<!-- clipboard -->
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-26 13:21" pubdate>
-              2023-07-26
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/26/%E5%A4%8D%E7%9B%98/%E5%81%9A%E4%BA%8B%E6%83%85%E7%9A%84%E6%AD%A5%E9%AA%A4/" target="_self">
-          
-        </a>
-      </h2>
+<script src="/js/main.js"></script>
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/26/%E5%A4%8D%E7%9B%98/%E5%81%9A%E4%BA%8B%E6%83%85%E7%9A%84%E6%AD%A5%E9%AA%A4/" target="_self">
-        <div>
-          做事情的步骤1、思路做事前思考  做什么，为什么做？围绕目的来做事  写下目标，做事的原因，怎么才算完成目标  怎么做？  每个步骤的目标，怎么才算完成目标 做事中  避免其他事情干扰  设定闹钟 做事后 比较目标是否完成 2、具体的实施看书做事前思考 目的 目的是看懂在写什么，然后获得启发  反馈读书应该回答以下问题才算是在真正的读书。  主题是什么，哪个方面的主题？  有哪些部分，提出什么论点
-        </div>
-      </a>
+<!-- search -->
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-26 13:01" pubdate>
-              2023-07-26
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+<!-- Baidu Analytics -->
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/24/%E6%95%99%E7%A8%8B/vim%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" target="_self">
-          
-        </a>
-      </h2>
+<!-- Cloudflare Analytics -->
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/24/%E6%95%99%E7%A8%8B/vim%E7%9A%84%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E4%BD%BF%E7%94%A8/" target="_self">
-        <div>
-          vim的配置以及使用vim的配置 在VSCode里面配置Vim的正确姿势（细节解析） - 知乎 (zhihu.com) vscode + vim 全键盘操作高效搭配方案 - 知乎 (zhihu.com) vim的使用（按照2的配置） HL行内前后移动 zz展开关闭 12345678910111213141516171819202122232425262728293031323334cmd + g
-        </div>
-      </a>
+<!-- Disqus Comments -->
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-24 14:26" pubdate>
-              2023-07-24
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+<!-- utterances Comments -->
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/24/%E6%95%99%E7%A8%8B/clang-format%E8%AE%BE%E7%BD%AE/" target="_self">
-          clang-format设置
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/24/%E6%95%99%E7%A8%8B/clang-format%E8%AE%BE%E7%BD%AE/" target="_self">
-        <div>
-          链接在此： 使用 clang-format 进行 C++ 代码风格管理 - 知乎 (zhihu.com) 我使用的 clang-format 配置文件 - 乌合之众 - 博客园 (cnblogs.com)
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-24 13:58" pubdate>
-              2023-07-24
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/22/%E5%A4%8D%E7%9B%98/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/" target="_self">
-          
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/22/%E5%A4%8D%E7%9B%98/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6/" target="_self">
-        <div>
-          讲了读书速度的问题。防止逗留和倒退的方法。 讲了检视阅读步骤。寻找主题和主题的脉络。关键点摘要。想象自己是一个侦探，发现别人发现不了的细节。 做笔记的原因和方式  自我要求的读者，阅读的艺术是什么。
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-22 14:01" pubdate>
-              2023-07-22
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/21/Plan%20And%20What%20I%20did/2023%20What%20I%20really%20want%20to%20do/" target="_self">
-          2023 What I really want to do
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/21/Plan%20And%20What%20I%20did/2023%20What%20I%20really%20want%20to%20do/" target="_self">
-        <div>
-          2023 What I really want to do
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-21 23:09" pubdate>
-              2023-07-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Plan-And-What-I-did/" class="category-chain-item">Plan And What I did</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Plan-And-What-I-did/2023/" class="category-chain-item">2023</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/21/Plan%20And%20What%20I%20did/2023-7/" target="_self">
-          7月计划
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/21/Plan%20And%20What%20I%20did/2023-7/" target="_self">
-        <div>
-          2023-77月想要做1、编程能力+4、反思每天练一篇题目，复习4篇题目早上9点-9点半 就是说这个月刷到前缀树模板秒杀 每天看懂并复现acwj的一节也就是说这个月到10_forloop 2、培养积极情绪+4、反思积极心理学每周1节，然后思考我能将该节的知识怎么运用。这周对这些知识点进行实践。 锻炼+冥想记录饮食和体重-要知道做什么有用和做什么没用，别丢了西瓜捡芝麻 记录每日训练动作和状态 看视频
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-21 22:56" pubdate>
-              2023-07-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Plan-And-What-I-did/" class="category-chain-item">Plan And What I did</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Plan-And-What-I-did/2023/" class="category-chain-item">2023</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Plan-And-What-I-did/2023/7%E6%9C%88/" class="category-chain-item">7月</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/21/Plan%20And%20What%20I%20did/2023/2023%20What%20I%20really%20want%20to%20do/" target="_self">
-          2023 What I really want to do
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/21/Plan%20And%20What%20I%20did/2023/2023%20What%20I%20really%20want%20to%20do/" target="_self">
-        <div>
-          2023 What I really want to do 提升编程计算机水平  培养积极情绪  读书  锻炼  坚持写log，来总结反思   原因：这些事情能培养我的技能，优势，拓宽我的视野，让我感觉更好，更自信。 How to do而改变需要养成习惯，因为习性会让人不知不觉走向旧路，后果就是毫无进展，让人沮丧，最后失去动力。而养成习惯的话需要一个一个的养成，原因是人的意志力是有限的。 这学期我
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-21 21:55" pubdate>
-              2023-07-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Plan-And-What-I-did/" class="category-chain-item">Plan And What I did</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Plan-And-What-I-did/2023/" class="category-chain-item">2023</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/21/Plan%20And%20What%20I%20did/2023/2023-7/" target="_self">
-          7月计划
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/21/Plan%20And%20What%20I%20did/2023/2023-7/" target="_self">
-        <div>
-          2023-77月想要做1、编程能力+4、反思每天练一篇题目，复习4篇题目也就是说这个月刷到前缀树模板秒杀 每天看懂并复现acwj的一节也就是说这个月到10_forloop 2、培养积极情绪+4、反思积极心理学每周1节，然后思考我能将该节的知识怎么运用。这周对这些知识点进行实践。 锻炼记录饮食和体重-要知道做什么有用和做什么没用，别丢了西瓜捡芝麻 记录每日训练动作和状态
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-21 21:46" pubdate>
-              2023-07-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Plan-And-What-I-did/" class="category-chain-item">Plan And What I did</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Plan-And-What-I-did/2023/" class="category-chain-item">2023</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Plan-And-What-I-did/2023/7%E6%9C%88/" class="category-chain-item">7月</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2023/07/20/%E6%95%99%E7%A8%8B/makefile%E7%90%86%E8%A7%A3%E5%92%8C%E4%BD%BF%E7%94%A8/" target="_self">
-          makefile理解和使用
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2023/07/20/%E6%95%99%E7%A8%8B/makefile%E7%90%86%E8%A7%A3%E5%92%8C%E4%BD%BF%E7%94%A8/" target="_self">
-        <div>
-          makefile的理解和使用是什么？ Linux系统下的c&#x2F;c++编译规则，用于自动编译程序，不需要手动gcc进行编译 作用：  不用手动输入源文件和一堆参数  修改源文件时候，make编译只去编译修改的文件，没修改的就不会重复工作，提高编译效率
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2023-07-20 21:23" pubdate>
-              2023-07-20
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E6%95%99%E7%A8%8B/" class="category-chain-item">教程</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-      </div>
-    </article>
-  </div>
-
-
-
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
-
-
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
-  </noscript>
 </body>
 </html>
